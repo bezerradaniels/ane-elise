@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Figtree', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  --brand-wine: #722F37;
+  --brand-wine-dark: #5a252c;
+  --brand-champagne: #E8D5B7;
+  --brand-neutral: #FAFAFA;
+  --brand-ink: #1A1A1A;
+  --brand-ink-light: #4A4A4A;
+}

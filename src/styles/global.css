@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --brand-wine: #7a1f4b;
+  --brand-champagne: #c8b38a;
+  --brand-neutral: #f5f3f0;
+  --brand-ink: #1e1b1c;
+}
