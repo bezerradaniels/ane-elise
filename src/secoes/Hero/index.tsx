@@ -26,7 +26,7 @@ export default function Hero() {
             </p>
 
             <div className="mt-6 flex flex-wrap items-center justify-center gap-4 lg:mt-10 lg:justify-start">
-              <a href="https://wa.me/5577998597104" target="_blank" rel="noreferrer">
+              <a href="https://wa.me/5577998597104" target="_blank" rel="noreferrer" id="btn-wpp-hero">
                 <Button className="group">
                   <Icon name="bxl-whatsapp" className="mr-2 text-xl" />
                   <span>Agendar avaliação</span>

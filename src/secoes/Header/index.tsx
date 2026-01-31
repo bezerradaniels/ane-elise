@@ -77,7 +77,7 @@ export default function Header() {
           <a href="tel:+5577998597104" className="text-sm font-medium text-(--brand-ink)/70 hover:text-(--brand-wine) cursor-pointer">
             (77) 99859-7104
           </a>
-          <a href="https://wa.me/5577998597104" target="_blank" rel="noreferrer">
+          <a href="https://wa.me/5577998597104" target="_blank" rel="noreferrer" id="btn-wpp-header-desktop">
             <Button className="group">
               <span>Agendar</span>
               <svg className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -134,6 +134,7 @@ export default function Header() {
                     rel="noreferrer"
                     onClick={close}
                     className="block"
+                    id="btn-wpp-header-mobile"
                   >
                     <Button className="w-full justify-center py-4">
                       <svg className="mr-2 h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
