@@ -1,9 +1,10 @@
-# Mapeamento de Botões do WhatsApp
+# Mapeamento de Botões e Links do Site
 
-Este documento mapeia todos os botões do WhatsApp no site, seus IDs únicos e localizações.
+Este documento mapeia todos os botões do WhatsApp e links importantes no site, seus IDs únicos e localizações.
 
 ## Prefixo Padrão
-Todos os botões seguem o padrão: `btn-wpp-{seção}-{variante}`
+- Botões WhatsApp: `btn-wpp-{seção}-{variante}`
+- Links diversos: `{seção}-{descrição}`
 
 ---
 
@@ -79,6 +80,16 @@ Todos os botões seguem o padrão: `btn-wpp-{seção}-{variante}`
 
 ---
 
+### 8. Footer - Developer Link
+- **ID:** `footer-developer-link`
+- **Localização:** Rodapé do site (barra inferior)
+- **Texto:** "Desenvolvido por Daniel Bezerra"
+- **Arquivo:** `/src/secoes/Footer/index.tsx`
+- **Linha:** ~91
+- **Descrição:** Link para o portfólio do desenvolvedor no rodapé
+
+---
+
 ## Informações Técnicas
 
 ### Número do WhatsApp
@@ -118,7 +129,8 @@ Condição: Click ID corresponde à RegEx ^btn-wpp-.*
 | About | 1 (responsivo) | - | 1 |
 | FAQ | 1 | 1 | 2 |
 | Contact | 1 (responsivo) | - | 1 |
-| **TOTAL** | **5** | **2** | **7** |
+| Footer | - | 1 (link) | 1 |
+| **TOTAL** | **5** | **3** | **8** |
 
 ---
 
