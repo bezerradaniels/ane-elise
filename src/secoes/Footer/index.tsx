@@ -81,16 +81,16 @@ export default function Footer() {
               © {new Date().getFullYear()} Dra. Ane Elise • Todos os direitos reservados
             </p>
             <p className="text-sm text-(--brand-ink)/40">
-              CRO-BA 00000
+              CRO-BA 25197
             </p>
             <a 
-              href="https://dani.dev.br" 
+              href="https://mintcode.com.br" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="text-sm text-(--brand-ink)/40 hover:text-(--brand-ink)/60 transition-colors cursor-pointer"
               id="footer-developer-link"
             >
-              Desenvolvido por Daniel Bezerra
+              Desenvolvido por Mintcode
             </a>
           </div>
         </div>
