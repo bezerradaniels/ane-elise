@@ -74,10 +74,10 @@ export default function Header() {
 
         {/* Desktop CTA */}
         <div className="hidden lg:flex items-center gap-4">
-          <a href="tel:+5577998085944" className="text-sm font-medium text-(--brand-ink)/70 hover:text-(--brand-wine) cursor-pointer">
-            (77) 99808-5944
+          <a href="tel:+5577998597104" className="text-sm font-medium text-(--brand-ink)/70 hover:text-(--brand-wine) cursor-pointer">
+            (77) 99859-7104
           </a>
-          <a href="https://wa.me/5577998085944" target="_blank" rel="noreferrer">
+          <a href="https://wa.me/5577998597104" target="_blank" rel="noreferrer">
             <Button className="group">
               <span>Agendar</span>
               <svg className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -129,7 +129,7 @@ export default function Header() {
 
                 <div className="mt-4 border-t border-black/5 pt-6">
                   <a
-                    href="https://wa.me/5577998085944"
+                    href="https://wa.me/5577998597104"
                     target="_blank"
                     rel="noreferrer"
                     onClick={close}

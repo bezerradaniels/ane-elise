@@ -64,7 +64,7 @@ export default function Footer() {
               </li>
               <li className="flex items-start gap-3 justify-center lg:justify-start">
                 <Icon name="bx-phone" className="text-lg" />
-                <span>(77) 99808-5944</span>
+                <span>(77) 99859-7104</span>
               </li>
               <li className="flex items-start gap-3 justify-center lg:justify-start">
                 <Icon name="bx-time" className="text-lg" />

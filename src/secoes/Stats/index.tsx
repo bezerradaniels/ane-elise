@@ -2,7 +2,7 @@ import Container from "../../componentes/Container";
 
 const stats = [
   { number: "200+", label: "Pacientes atendidos" },
-  { number: "5+", label: "Anos de experiência" },
+  { number: "3+", label: "Anos de experiência" },
   { number: "98%", label: "Satisfação" },
   { number: "4", label: "Especialidades" },
 ];

@@ -48,7 +48,7 @@ export default function Faq() {
               <p className="text-(--brand-ink)/70 mb-6">
                 Entre em contato conosco para uma consulta gratuita e tire todas as suas dúvidas.
               </p>
-              <a href="https://wa.me/5577998085944" target="_blank" rel="noreferrer">
+              <a href="https://wa.me/5577998597104" target="_blank" rel="noreferrer">
                 <Button className="group">
                   <span>Falar no WhatsApp</span>
                   <svg className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -97,7 +97,7 @@ export default function Faq() {
           <p className="text-(--brand-ink)/70 mb-6">
             Entre em contato conosco para uma consulta gratuita e tire todas as suas dúvidas.
           </p>
-          <a href="https://wa.me/5577998085944" target="_blank" rel="noreferrer">
+          <a href="https://wa.me/5577998597104" target="_blank" rel="noreferrer">
             <Button className="group w-full">
               <span>Falar no WhatsApp</span>
               <svg className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">

@@ -94,7 +94,7 @@ export default function About() {
             </div>
 
             <div className="mt-10 flex flex-wrap items-center justify-center gap-6 lg:justify-start">
-              <a href="https://wa.me/5577998085944" target="_blank" rel="noreferrer">
+              <a href="https://wa.me/5577998597104" target="_blank" rel="noreferrer">
                 <Button variant="secondary" className="group">
                   <Icon name="bxl-whatsapp" className="mr-2 text-2xl" />
                   <span>Agendar consulta no WhatsApp</span>
