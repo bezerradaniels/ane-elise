@@ -75,7 +75,7 @@ export default function Hero() {
               {/* Decorative circle - Hidden on mobile */}
               <div className="absolute -bottom-6 -right-6 h-24 w-24 rounded-full border-4 border-(--brand-champagne) bg-white shadow-lg hidden lg:flex items-center justify-center">
                 <div className="text-center">
-                  <p className="text-2xl font-bold text-(--brand-wine)">5+</p>
+                  <p className="text-2xl font-bold text-(--brand-wine)">3+</p>
                   <p className="text-[10px] text-(--brand-ink)/60 leading-tight">anos de<br/>experiência</p>
                 </div>
               </div>
