@@ -21,7 +21,7 @@ export default function Contact() {
             </div>
             
             <h2 className="text-3xl font-bold md:text-4xl lg:text-5xl">
-              Agende uma consulta gratuita
+              Agende uma consulta personalizada
             </h2>
             
             <p className="mt-6 text-lg text-white/70 leading-relaxed">

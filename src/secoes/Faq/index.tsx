@@ -46,7 +46,7 @@ export default function Faq() {
                 Ainda tem dúvidas?
               </h3>
               <p className="text-(--brand-ink)/70 mb-6">
-                Entre em contato conosco para uma consulta gratuita e tire todas as suas dúvidas.
+                Entre em contato conosco para uma consulta personalizada e tire todas as suas dúvidas.
               </p>
               <a href="https://wa.me/5577998597104" target="_blank" rel="noreferrer" id="btn-wpp-faq-desktop">
                 <Button className="group">
@@ -95,7 +95,7 @@ export default function Faq() {
             Ainda tem dúvidas?
           </h3>
           <p className="text-(--brand-ink)/70 mb-6">
-            Entre em contato conosco para uma consulta gratuita e tire todas as suas dúvidas.
+            Entre em contato conosco para uma consulta personalizada e tire todas as suas dúvidas.
           </p>
           <a href="https://wa.me/5577998597104" target="_blank" rel="noreferrer" id="btn-wpp-faq-mobile">
             <Button className="group w-full">

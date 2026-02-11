@@ -77,13 +77,13 @@ export default function Footer() {
               CRO-BA 25197
             </p>
             <a 
-              href="https://mintcode.com.br" 
+              href="https://dani.dev.br" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="text-sm text-(--brand-ink)/40 hover:text-(--brand-ink)/60 transition-colors cursor-pointer"
               id="footer-developer-link"
             >
-              Desenvolvido por Mintcode
+              Desenvolvido por Daniel Bezerra
             </a>
           </div>
         </div>
