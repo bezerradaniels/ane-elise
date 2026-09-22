@@ -15,7 +15,7 @@ Este documento mapeia todos os botões do WhatsApp e links importantes no site, 
 - **Localização:** Cabeçalho do site (visível apenas em desktop)
 - **Texto:** "Agendar"
 - **Arquivo:** `/index.html`
-- **Linha:** ~140
+- **Linha:** ~169
 - **Descrição:** Botão principal no menu superior para desktop
 
 ---
@@ -25,7 +25,7 @@ Este documento mapeia todos os botões do WhatsApp e links importantes no site, 
 - **Localização:** Menu mobile (hamburguer)
 - **Texto:** "Agendar no WhatsApp"
 - **Arquivo:** `/index.html`
-- **Linha:** ~203
+- **Linha:** ~232
 - **Descrição:** Botão no menu mobile que aparece quando o usuário abre o menu hamburguer
 
 ---
@@ -35,7 +35,7 @@ Este documento mapeia todos os botões do WhatsApp e links importantes no site, 
 - **Localização:** Seção principal/banner do site (primeira seção)
 - **Texto:** "Agendar avaliação"
 - **Arquivo:** `/index.html`
-- **Linha:** ~250
+- **Linha:** ~279
 - **Descrição:** Call-to-action principal na primeira dobra do site
 
 ---
@@ -45,7 +45,7 @@ Este documento mapeia todos os botões do WhatsApp e links importantes no site, 
 - **Localização:** Seção "Sobre" (About)
 - **Texto:** "Agendar consulta no WhatsApp"
 - **Arquivo:** `/index.html`
-- **Linha:** ~430
+- **Linha:** ~459
 - **Descrição:** Botão secundário na seção sobre a dentista
 
 ---
@@ -55,7 +55,7 @@ Este documento mapeia todos os botões do WhatsApp e links importantes no site, 
 - **Localização:** Seção de perguntas frequentes (visível apenas em desktop)
 - **Texto:** "Falar no WhatsApp"
 - **Arquivo:** `/index.html`
-- **Linha:** ~818
+- **Linha:** ~847
 - **Descrição:** CTA no card "Ainda tem dúvidas?" para desktop
 
 ---
@@ -65,7 +65,7 @@ Este documento mapeia todos os botões do WhatsApp e links importantes no site, 
 - **Localização:** Seção de perguntas frequentes (visível apenas em mobile)
 - **Texto:** "Falar no WhatsApp"
 - **Arquivo:** `/index.html`
-- **Linha:** ~896
+- **Linha:** ~925
 - **Descrição:** CTA no card "Ainda tem dúvidas?" para mobile (aparece no final da seção)
 
 ---
@@ -75,7 +75,7 @@ Este documento mapeia todos os botões do WhatsApp e links importantes no site, 
 - **Localização:** Seção de contato
 - **Texto:** "Chamar no WhatsApp"
 - **Arquivo:** `/index.html`
-- **Linha:** ~954
+- **Linha:** ~983
 - **Descrição:** Botão principal no card de contato
 
 ---
@@ -85,7 +85,7 @@ Este documento mapeia todos os botões do WhatsApp e links importantes no site, 
 - **Localização:** Rodapé do site (barra inferior)
 - **Texto:** "Desenvolvido por Daniel Bezerra"
 - **Arquivo:** `/index.html`
-- **Linha:** ~1030
+- **Linha:** ~1059
 - **Descrição:** Link para o portfólio do desenvolvedor no rodapé
 
 ---
@@ -99,6 +99,7 @@ Este documento mapeia todos os botões do WhatsApp e links importantes no site, 
 ### Rastreamento com Google Tag Manager
 Todos os botões podem ser rastreados usando o Google Tag Manager através de:
 - **Trigger:** Click - Just Links
+- **Obs.:** o GTM carrega 1 s depois da página (ou no primeiro scroll), para não atrasar a renderização. Cliques feitos antes disso não são registrados.
 - **Condição:** Click ID matches RegEx `^btn-wpp-.*`
 
 > O ID fica no `<a>`. Use "Just Links" (e não "All Elements"): assim o GTM reporta o link mesmo quando o clique cai no ícone ou no texto de dentro dele.

@@ -2,8 +2,26 @@
 @source "../index.html";
 @source "../js";
 
+@font-face {
+  font-family: 'Figtree';
+  font-style: normal;
+  font-weight: 300 800;
+  font-display: swap;
+  src: url(../fonts/figtree-latin.woff2) format('woff2');
+}
+
 html {
   scroll-behavior: smooth;
+}
+
+@layer components {
+  .icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    fill: currentColor;
+    flex-shrink: 0;
+  }
 }
 
 body {

@@ -1,12 +1,24 @@
 <!doctype html>
 <html lang="pt-BR">
   <head>
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-WRPNVP89');</script>
+    <!-- Google Tag Manager (carregado depois da página, para não atrasar a renderização) -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      (function () {
+        var loaded = false;
+        function loadGTM() {
+          if (loaded) return;
+          loaded = true;
+          window.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+          var j = document.createElement('script');
+          j.async = true;
+          j.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-WRPNVP89';
+          document.head.appendChild(j);
+        }
+        window.addEventListener('load', function () { setTimeout(loadGTM, 1000); });
+        window.addEventListener('scroll', loadGTM, { once: true, passive: true });
+      })();
+    </script>
     <!-- End Google Tag Manager -->
 
     <meta charset="UTF-8" />
@@ -101,10 +113,7 @@
     }
     </script>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="preload" href="fonts/figtree-latin.woff2" as="font" type="font/woff2" crossorigin>
     <link href="css/style.css" rel="stylesheet">
     <script src="js/main.js" defer></script>
   </head>
@@ -114,13 +123,33 @@
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
+    <!-- Ícones (Boxicons, MIT) -->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+      <symbol id="bx-award" viewBox="0 0 24 24"><path d="M5 8.999c0 1.902.765 3.627 2 4.89V21a.998.998 0 0 0 1.447.895L12 20.118l3.553 1.776a.992.992 0 0 0 .972-.043c.295-.183.475-.504.475-.851v-7.11a6.976 6.976 0 0 0 2-4.891C19 5.14 15.86 2 12 2S5 5.14 5 8.999zm7.447 9.106a1 1 0 0 0-.895 0L9 19.382v-4.067c.911.434 1.926.685 3 .685s2.089-.25 3-.685v4.066l-2.553-1.276zM12 4c2.756 0 5 2.242 5 4.999A5.006 5.006 0 0 1 12 14c-2.757 0-5-2.243-5-5.001A5.005 5.005 0 0 1 12 4z"/></symbol>
+      <symbol id="bx-check" viewBox="0 0 24 24"><path d="m10 15.586-3.293-3.293-1.414 1.414L10 18.414l9.707-9.707-1.414-1.414z"/></symbol>
+      <symbol id="bx-chevron-left" viewBox="0 0 24 24"><path d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"/></symbol>
+      <symbol id="bx-chevron-right" viewBox="0 0 24 24"><path d="M10.707 17.707 16.414 12l-5.707-5.707-1.414 1.414L13.586 12l-4.293 4.293z"/></symbol>
+      <symbol id="bx-child" viewBox="0 0 24 24"><circle cx="12" cy="6" r="2"/><path d="M14 9h-4a1 1 0 0 0-.8.4l-3 4 1.6 1.2L9 13v7h2v-4h2v4h2v-7l1.2 1.6 1.6-1.2-3-4A1 1 0 0 0 14 9z"/></symbol>
+      <symbol id="bx-cog" viewBox="0 0 24 24"><path d="M12 16c2.206 0 4-1.794 4-4s-1.794-4-4-4-4 1.794-4 4 1.794 4 4 4zm0-6c1.084 0 2 .916 2 2s-.916 2-2 2-2-.916-2-2 .916-2 2-2z"/><path d="m2.845 16.136 1 1.73c.531.917 1.809 1.261 2.73.73l.529-.306A8.1 8.1 0 0 0 9 19.402V20c0 1.103.897 2 2 2h2c1.103 0 2-.897 2-2v-.598a8.132 8.132 0 0 0 1.896-1.111l.529.306c.923.53 2.198.188 2.731-.731l.999-1.729a2.001 2.001 0 0 0-.731-2.732l-.505-.292a7.718 7.718 0 0 0 0-2.224l.505-.292a2.002 2.002 0 0 0 .731-2.732l-.999-1.729c-.531-.92-1.808-1.265-2.731-.732l-.529.306A8.1 8.1 0 0 0 15 4.598V4c0-1.103-.897-2-2-2h-2c-1.103 0-2 .897-2 2v.598a8.132 8.132 0 0 0-1.896 1.111l-.529-.306c-.924-.531-2.2-.187-2.731.732l-.999 1.729a2.001 2.001 0 0 0 .731 2.732l.505.292a7.683 7.683 0 0 0 0 2.223l-.505.292a2.003 2.003 0 0 0-.731 2.733zm3.326-2.758A5.703 5.703 0 0 1 6 12c0-.462.058-.926.17-1.378a.999.999 0 0 0-.47-1.108l-1.123-.65.998-1.729 1.145.662a.997.997 0 0 0 1.188-.142 6.071 6.071 0 0 1 2.384-1.399A1 1 0 0 0 11 5.3V4h2v1.3a1 1 0 0 0 .708.956 6.083 6.083 0 0 1 2.384 1.399.999.999 0 0 0 1.188.142l1.144-.661 1 1.729-1.124.649a1 1 0 0 0-.47 1.108c.112.452.17.916.17 1.378 0 .461-.058.925-.171 1.378a1 1 0 0 0 .471 1.108l1.123.649-.998 1.729-1.145-.661a.996.996 0 0 0-1.188.142 6.071 6.071 0 0 1-2.384 1.399A1 1 0 0 0 13 18.7l.002 1.3H11v-1.3a1 1 0 0 0-.708-.956 6.083 6.083 0 0 1-2.384-1.399.992.992 0 0 0-1.188-.141l-1.144.662-1-1.729 1.124-.651a1 1 0 0 0 .471-1.108z"/></symbol>
+      <symbol id="bx-happy" viewBox="0 0 24 24"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8z"/><circle cx="8.5" cy="10.5" r="1.5"/><circle cx="15.493" cy="10.493" r="1.493"/><path d="M12 18c4 0 5-4 5-4H7s1 4 5 4z"/></symbol>
+      <symbol id="bx-health" viewBox="0 0 24 24"><path d="M19.649 5.286 14 8.548V2.025h-4v6.523L4.351 5.286l-2 3.465 5.648 3.261-5.648 3.261 2 3.465L10 15.477V22h4v-6.523l5.649 3.261 2-3.465-5.648-3.261 5.648-3.261z"/></symbol>
+      <symbol id="bx-map" viewBox="0 0 24 24"><path d="M12 14c2.206 0 4-1.794 4-4s-1.794-4-4-4-4 1.794-4 4 1.794 4 4 4zm0-6c1.103 0 2 .897 2 2s-.897 2-2 2-2-.897-2-2 .897-2 2-2z"/><path d="M11.42 21.814a.998.998 0 0 0 1.16 0C12.884 21.599 20.029 16.44 20 10c0-4.411-3.589-8-8-8S4 5.589 4 9.995c-.029 6.445 7.116 11.604 7.42 11.819zM12 4c3.309 0 6 2.691 6 6.005.021 4.438-4.388 8.423-6 9.73-1.611-1.308-6.021-5.294-6-9.735 0-3.309 2.691-6 6-6z"/></symbol>
+      <symbol id="bx-phone" viewBox="0 0 24 24"><path d="M17.707 12.293a.999.999 0 0 0-1.414 0l-1.594 1.594c-.739-.22-2.118-.72-2.992-1.594s-1.374-2.253-1.594-2.992l1.594-1.594a.999.999 0 0 0 0-1.414l-4-4a.999.999 0 0 0-1.414 0L3.581 5.005c-.38.38-.594.902-.586 1.435.023 1.424.4 6.37 4.298 10.268s8.844 4.274 10.269 4.298h.028c.528 0 1.027-.208 1.405-.586l2.712-2.712a.999.999 0 0 0 0-1.414l-4-4.001zm-.127 6.712c-1.248-.021-5.518-.356-8.873-3.712-3.366-3.366-3.692-7.651-3.712-8.874L7 4.414 9.586 7 8.293 8.293a1 1 0 0 0-.272.912c.024.115.611 2.842 2.271 4.502s4.387 2.247 4.502 2.271a.991.991 0 0 0 .912-.271L17 14.414 19.586 17l-2.006 2.005z"/></symbol>
+      <symbol id="bx-phone-call" viewBox="0 0 24 24"><path d="M16.57 22a2 2 0 0 0 1.43-.59l2.71-2.71a1 1 0 0 0 0-1.41l-4-4a1 1 0 0 0-1.41 0l-1.6 1.59a7.55 7.55 0 0 1-3-1.59 7.62 7.62 0 0 1-1.59-3l1.59-1.6a1 1 0 0 0 0-1.41l-4-4a1 1 0 0 0-1.41 0L2.59 6A2 2 0 0 0 2 7.43 15.28 15.28 0 0 0 6.3 17.7 15.28 15.28 0 0 0 16.57 22zM6 5.41 8.59 8 7.3 9.29a1 1 0 0 0-.3.91 10.12 10.12 0 0 0 2.3 4.5 10.08 10.08 0 0 0 4.5 2.3 1 1 0 0 0 .91-.27L16 15.41 18.59 18l-2 2a13.28 13.28 0 0 1-8.87-3.71A13.28 13.28 0 0 1 4 7.41zM20 11h2a8.81 8.81 0 0 0-9-9v2a6.77 6.77 0 0 1 7 7z"/><path d="M13 8c2.1 0 3 .9 3 3h2c0-3.22-1.78-5-5-5z"/></symbol>
+      <symbol id="bx-star" viewBox="0 0 24 24"><path d="m6.516 14.323-1.49 6.452a.998.998 0 0 0 1.529 1.057L12 18.202l5.445 3.63a1.001 1.001 0 0 0 1.517-1.106l-1.829-6.4 4.536-4.082a1 1 0 0 0-.59-1.74l-5.701-.454-2.467-5.461a.998.998 0 0 0-1.822 0L8.622 8.05l-5.701.453a1 1 0 0 0-.619 1.713l4.214 4.107zm2.853-4.326a.998.998 0 0 0 .832-.586L12 5.43l1.799 3.981a.998.998 0 0 0 .832.586l3.972.315-3.271 2.944c-.284.256-.397.65-.293 1.018l1.253 4.385-3.736-2.491a.995.995 0 0 0-1.109 0l-3.904 2.603 1.05-4.546a1 1 0 0 0-.276-.94l-3.038-2.962 4.09-.326z"/></symbol>
+      <symbol id="bx-time" viewBox="0 0 24 24"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8z"/><path d="M13 7h-2v6h6v-2h-4z"/></symbol>
+      <symbol id="bx-user" viewBox="0 0 24 24"><path d="M12 2a5 5 0 1 0 5 5 5 5 0 0 0-5-5zm0 8a3 3 0 1 1 3-3 3 3 0 0 1-3 3zm9 11v-1a7 7 0 0 0-7-7h-4a7 7 0 0 0-7 7v1h2v-1a5 5 0 0 1 5-5h4a5 5 0 0 1 5 5v1z"/></symbol>
+      <symbol id="bxl-whatsapp" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M18.403 5.633A8.919 8.919 0 0 0 12.053 3c-4.948 0-8.976 4.027-8.978 8.977 0 1.582.413 3.126 1.198 4.488L3 21.116l4.759-1.249a8.981 8.981 0 0 0 4.29 1.093h.004c4.947 0 8.975-4.027 8.977-8.977a8.926 8.926 0 0 0-2.627-6.35m-6.35 13.812h-.003a7.446 7.446 0 0 1-3.798-1.041l-.272-.162-2.824.741.753-2.753-.177-.282a7.448 7.448 0 0 1-1.141-3.971c.002-4.114 3.349-7.461 7.465-7.461a7.413 7.413 0 0 1 5.275 2.188 7.42 7.42 0 0 1 2.183 5.279c-.002 4.114-3.349 7.462-7.461 7.462m4.093-5.589c-.225-.113-1.327-.655-1.533-.73-.205-.075-.354-.112-.504.112s-.58.729-.711.879-.262.168-.486.056-.947-.349-1.804-1.113c-.667-.595-1.117-1.329-1.248-1.554s-.014-.346.099-.458c.101-.1.224-.262.336-.393.112-.131.149-.224.224-.374s.038-.281-.019-.393c-.056-.113-.505-1.217-.692-1.666-.181-.435-.366-.377-.504-.383a9.65 9.65 0 0 0-.429-.008.826.826 0 0 0-.599.28c-.206.225-.785.767-.785 1.871s.804 2.171.916 2.321c.112.15 1.582 2.415 3.832 3.387.536.231.954.369 1.279.473.537.171 1.026.146 1.413.089.431-.064 1.327-.542 1.514-1.066.187-.524.187-.973.131-1.067-.056-.094-.207-.151-.43-.263"/></symbol>
+      <symbol id="bxs-star" viewBox="0 0 24 24"><path d="M21.947 9.179a1.001 1.001 0 0 0-.868-.676l-5.701-.453-2.467-5.461a.998.998 0 0 0-1.822-.001L8.622 8.05l-5.701.453a1 1 0 0 0-.619 1.713l4.213 4.107-1.49 6.452a1 1 0 0 0 1.53 1.057L12 18.202l5.445 3.63a1.001 1.001 0 0 0 1.517-1.106l-1.829-6.4 4.536-4.082c.297-.268.406-.686.278-1.065z"/></symbol>
+    </svg>
+
     <div class="min-h-screen bg-(--brand-neutral) text-(--brand-ink)">
       <!-- ============ HEADER ============ -->
       <header id="site-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex h-26 items-center justify-between">
           <!-- Brand -->
           <a href="#inicio" class="flex items-center gap-3 cursor-pointer" data-close-menu>
-            <img src="img/logo-ane-elise.png" alt="Logo Dra. Ane Elise" width="702" height="418" class="w-auto h-20" />
+            <img src="img/logo-ane-elise.webp" srcset="img/logo-ane-elise-240.webp 240w, img/logo-ane-elise.webp 480w" sizes="135px" alt="Logo Dra. Ane Elise" width="702" height="418" class="w-auto h-20" />
           </a>
 
           <!-- Desktop nav -->
@@ -209,9 +238,9 @@
                   </a>
 
                   <div class="mt-6 flex items-center justify-center gap-4 text-sm text-(--brand-ink)/50">
-                    <span class="flex items-center gap-1"><i class="bx bx-map text-base"></i> Bom Jesus da Lapa - BA</span>
+                    <span class="flex items-center gap-1"><svg class="icon text-base" aria-hidden="true"><use href="#bx-map"/></svg> Bom Jesus da Lapa - BA</span>
                     <span>•</span>
-                    <span class="flex items-center gap-1"><i class="bx bx-time text-base"></i> Seg a Sex</span>
+                    <span class="flex items-center gap-1"><svg class="icon text-base" aria-hidden="true"><use href="#bx-time"/></svg> Seg a Sex</span>
                   </div>
                 </div>
               </div>
@@ -235,7 +264,7 @@
               <div class="order-1 lg:order-1 text-center lg:text-left">
                 <h1 class="text-3xl font-bold leading-[1.1] tracking-tight text-(--brand-ink) lg:text-5xl xl:text-6xl 2xl:text-7xl">
                   <span class="mb-4 flex items-center justify-center gap-2 text-sm font-semibold uppercase tracking-wider text-(--brand-wine) lg:mb-6 lg:justify-start lg:text-base">
-                    <i class="bx bx-map text-lg" aria-hidden="true"></i>
+                    <svg class="icon text-lg" aria-hidden="true"><use href="#bx-map"/></svg>
                     Dentista em Bom Jesus da Lapa - BA
                   </span>
                   Estética e saúde bucal com
@@ -249,7 +278,7 @@
                 <div class="mt-6 flex flex-wrap items-center justify-center gap-4 lg:mt-10 lg:justify-start">
                   <a href="https://wa.me/5577998085944?text=Ol%C3%A1%2C%20Dra.%20Ane%20Elise%21%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noreferrer" id="btn-wpp-hero"
                      class="group inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 cursor-pointer bg-(--brand-wine) text-white hover:bg-(--brand-wine)/90 focus:ring-(--brand-wine)">
-                    <i class="bx bxl-whatsapp mr-2 text-xl"></i>
+                    <svg class="icon mr-2 text-xl" aria-hidden="true"><use href="#bxl-whatsapp"/></svg>
                     <span>Agendar avaliação</span>
                     <svg class="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -264,7 +293,7 @@
                   <!-- Main image container -->
                   <div class="relative aspect-3/4 overflow-hidden rounded-3xl bg-white shadow-xl lg:aspect-4/5 lg:rounded-[2.5rem] lg:shadow-2xl">
                     <img
-                      src="img/dra-ane-elise.webp"
+                      src="img/dra-ane-elise.webp" srcset="img/dra-ane-elise-640.webp 640w, img/dra-ane-elise-800.webp 800w, img/dra-ane-elise.webp 1080w" sizes="(min-width: 1280px) 592px, (min-width: 1024px) 45vw, calc(100vw - 32px)"
                       alt="Dra. Ane Elise, cirurgiã dentista em Bom Jesus da Lapa - BA"
                       width="1068" height="1600"
                       fetchpriority="high"
@@ -277,7 +306,7 @@
                   <div class="absolute -left-4 bottom-20 rounded-2xl bg-white p-4 shadow-xl md:-left-8 lg:-left-12 hidden lg:block">
                     <div class="flex items-center gap-3">
                       <div class="h-12 w-12 rounded-full bg-(--brand-wine)/10 flex items-center justify-center">
-                        <i class="bx bx-user text-4xl text-(--brand-wine)"></i>
+                        <svg class="icon text-4xl text-(--brand-wine)" aria-hidden="true"><use href="#bx-user"/></svg>
                       </div>
                       <div>
                         <p class="font-semibold text-(--brand-ink)">Dra. Ane Elise</p>
@@ -309,7 +338,7 @@
             <div class="mt-20 gap-4 sm:grid-cols-3 hidden lg:grid">
               <div class="group flex items-center gap-4 rounded-2xl bg-white p-5 shadow-sm transition-all hover:shadow-lg hover:-translate-y-1">
                 <div class="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-(--brand-wine)/10 transition-colors group-hover:bg-(--brand-wine)">
-                  <i class="bx bx-phone text-4xl text-(--brand-wine) group-hover:text-white"></i>
+                  <svg class="icon text-4xl text-(--brand-wine) group-hover:text-white" aria-hidden="true"><use href="#bx-phone"/></svg>
                 </div>
                 <div>
                   <p class="text-sm text-(--brand-ink)/60">Precisa de atendimento?</p>
@@ -319,7 +348,7 @@
 
               <div class="group flex items-center gap-4 rounded-2xl bg-white p-5 shadow-sm transition-all hover:shadow-lg hover:-translate-y-1">
                 <div class="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-(--brand-wine)/10 transition-colors group-hover:bg-(--brand-wine)">
-                  <i class="bx bx-map text-4xl text-(--brand-wine) group-hover:text-white"></i>
+                  <svg class="icon text-4xl text-(--brand-wine) group-hover:text-white" aria-hidden="true"><use href="#bx-map"/></svg>
                 </div>
                 <div>
                   <p class="text-sm text-(--brand-ink)/60">Localização</p>
@@ -329,7 +358,7 @@
 
               <div class="group flex items-center gap-4 rounded-2xl bg-white p-5 shadow-sm transition-all hover:shadow-lg hover:-translate-y-1">
                 <div class="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-(--brand-wine)/10 transition-colors group-hover:bg-(--brand-wine)">
-                  <i class="bx bx-time text-4xl text-(--brand-wine) group-hover:text-white"></i>
+                  <svg class="icon text-4xl text-(--brand-wine) group-hover:text-white" aria-hidden="true"><use href="#bx-time"/></svg>
                 </div>
                 <div>
                   <p class="text-sm text-(--brand-ink)/60">Horário de atendimento</p>
@@ -369,7 +398,7 @@
                   <!-- Main image -->
                   <div class="relative aspect-4/5 overflow-hidden rounded-4xl bg-(--brand-neutral)">
                     <img
-                      src="img/paciente.webp"
+                      src="img/paciente.webp" srcset="img/paciente-640.webp 640w, img/paciente-800.webp 800w, img/paciente.webp 1080w" sizes="(min-width: 1280px) 560px, (min-width: 1024px) 45vw, calc(100vw - 32px)"
                       alt="Paciente em atendimento com a Dra. Ane Elise, dentista em Bom Jesus da Lapa"
                       width="1080" height="1350"
                       loading="lazy"
@@ -381,7 +410,7 @@
                   <!-- Secondary image -->
                   <div class="absolute -bottom-8 -right-8 w-2/3 aspect-square overflow-hidden rounded-3xl border-8 border-white bg-(--brand-neutral) shadow-xl md:-right-12">
                     <img
-                      src="img/dra-ane-elise-about.webp"
+                      src="img/dra-ane-elise-about.webp" srcset="img/dra-ane-elise-about-640.webp 640w, img/dra-ane-elise-about-800.webp 800w, img/dra-ane-elise-about.webp 1080w" sizes="(min-width: 1280px) 400px, (min-width: 1024px) 30vw, 66vw"
                       alt="Dra. Ane Elise, cirurgiã dentista"
                       width="1080" height="1350"
                       loading="lazy"
@@ -402,25 +431,25 @@
                 <div class="mt-8 grid gap-4 sm:grid-cols-2">
                   <div class="flex items-center gap-3">
                     <span class="flex h-10 w-10 items-center justify-center rounded-lg bg-(--brand-wine)/10">
-                      <i class="bx bx-award text-xl text-(--brand-wine)"></i>
+                      <svg class="icon text-xl text-(--brand-wine)" aria-hidden="true"><use href="#bx-award"/></svg>
                     </span>
                     <span class="font-medium text-(--brand-ink)">Profissional experiente</span>
                   </div>
                   <div class="flex items-center gap-3">
                     <span class="flex h-10 w-10 items-center justify-center rounded-lg bg-(--brand-wine)/10">
-                      <i class="bx bx-star text-xl text-(--brand-wine)"></i>
+                      <svg class="icon text-xl text-(--brand-wine)" aria-hidden="true"><use href="#bx-star"/></svg>
                     </span>
                     <span class="font-medium text-(--brand-ink)">Serviços completos</span>
                   </div>
                   <div class="flex items-center gap-3">
                     <span class="flex h-10 w-10 items-center justify-center rounded-lg bg-(--brand-wine)/10">
-                      <i class="bx bx-cog text-xl text-(--brand-wine)"></i>
+                      <svg class="icon text-xl text-(--brand-wine)" aria-hidden="true"><use href="#bx-cog"/></svg>
                     </span>
                     <span class="font-medium text-(--brand-ink)">Tecnologia moderna</span>
                   </div>
                   <div class="flex items-center gap-3">
                     <span class="flex h-10 w-10 items-center justify-center rounded-lg bg-(--brand-wine)/10">
-                      <i class="bx bx-phone-call text-xl text-(--brand-wine)"></i>
+                      <svg class="icon text-xl text-(--brand-wine)" aria-hidden="true"><use href="#bx-phone-call"/></svg>
                     </span>
                     <span class="font-medium text-(--brand-ink)">Atendimento com excelência</span>
                   </div>
@@ -429,7 +458,7 @@
                 <div class="mt-10 flex flex-wrap items-center justify-center gap-6 lg:justify-start">
                   <a href="https://wa.me/5577998085944?text=Ol%C3%A1%2C%20Dra.%20Ane%20Elise%21%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noreferrer" id="btn-wpp-about"
                      class="group inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 cursor-pointer bg-(--brand-champagne) text-(--brand-ink) hover:bg-(--brand-champagne)/90 focus:ring-(--brand-champagne)">
-                    <i class="bx bxl-whatsapp mr-2 text-2xl"></i>
+                    <svg class="icon mr-2 text-2xl" aria-hidden="true"><use href="#bxl-whatsapp"/></svg>
                     <span>Agendar consulta no WhatsApp</span>
                     <svg class="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -466,7 +495,7 @@
                 <div class="absolute inset-0 bg-(--brand-wine) translate-y-full transition-transform duration-500 group-hover:translate-y-0"></div>
                 <div class="relative z-10">
                   <div class="mb-6 grid h-16 w-16 place-items-center rounded-2xl bg-(--brand-wine)/10 transition-colors duration-500 group-hover:bg-white/20">
-                    <i class="bx bx-star text-md text-(--brand-wine) transition-colors duration-500 group-hover:text-white"></i>
+                    <svg class="icon text-md text-(--brand-wine) transition-colors duration-500 group-hover:text-white" aria-hidden="true"><use href="#bx-star"/></svg>
                   </div>
                   <h3 class="text-xl font-bold text-(--brand-ink) transition-colors duration-500 group-hover:text-white">Facetas</h3>
                   <p class="mt-3 text-(--brand-ink)/70 transition-colors duration-500 group-hover:text-white/80">Facetas e lentes de contato dental com naturalidade e planejamento para harmonia do sorriso.</p>
@@ -481,7 +510,7 @@
                 <div class="absolute inset-0 bg-(--brand-wine) translate-y-full transition-transform duration-500 group-hover:translate-y-0"></div>
                 <div class="relative z-10">
                   <div class="mb-6 grid h-16 w-16 place-items-center rounded-2xl bg-(--brand-wine)/10 transition-colors duration-500 group-hover:bg-white/20">
-                    <i class="bx bx-health text-md text-(--brand-wine) transition-colors duration-500 group-hover:text-white"></i>
+                    <svg class="icon text-md text-(--brand-wine) transition-colors duration-500 group-hover:text-white" aria-hidden="true"><use href="#bx-health"/></svg>
                   </div>
                   <h3 class="text-xl font-bold text-(--brand-ink) transition-colors duration-500 group-hover:text-white">Clareamento</h3>
                   <p class="mt-3 text-(--brand-ink)/70 transition-colors duration-500 group-hover:text-white/80">Clareamento dental seguro, com acompanhamento e orientação profissional.</p>
@@ -496,7 +525,7 @@
                 <div class="absolute inset-0 bg-(--brand-wine) translate-y-full transition-transform duration-500 group-hover:translate-y-0"></div>
                 <div class="relative z-10">
                   <div class="mb-6 grid h-16 w-16 place-items-center rounded-2xl bg-(--brand-wine)/10 transition-colors duration-500 group-hover:bg-white/20">
-                    <i class="bx bx-child text-md text-(--brand-wine) transition-colors duration-500 group-hover:text-white"></i>
+                    <svg class="icon text-md text-(--brand-wine) transition-colors duration-500 group-hover:text-white" aria-hidden="true"><use href="#bx-child"/></svg>
                   </div>
                   <h3 class="text-xl font-bold text-(--brand-ink) transition-colors duration-500 group-hover:text-white">Atendimento Infantil</h3>
                   <p class="mt-3 text-(--brand-ink)/70 transition-colors duration-500 group-hover:text-white/80">Odontopediatria com cuidado humanizado e acolhedor para crianças, com foco em prevenção.</p>
@@ -511,7 +540,7 @@
                 <div class="absolute inset-0 bg-(--brand-wine) translate-y-full transition-transform duration-500 group-hover:translate-y-0"></div>
                 <div class="relative z-10">
                   <div class="mb-6 grid h-16 w-16 place-items-center rounded-2xl bg-(--brand-wine)/10 transition-colors duration-500 group-hover:bg-white/20">
-                    <i class="bx bx-happy text-md text-(--brand-wine) transition-colors duration-500 group-hover:text-white"></i>
+                    <svg class="icon text-md text-(--brand-wine) transition-colors duration-500 group-hover:text-white" aria-hidden="true"><use href="#bx-happy"/></svg>
                   </div>
                   <h3 class="text-xl font-bold text-(--brand-ink) transition-colors duration-500 group-hover:text-white">Ortodontia</h3>
                   <p class="mt-3 text-(--brand-ink)/70 transition-colors duration-500 group-hover:text-white/80">Aparelho ortodôntico e alinhamento dentário com planejamento e foco em saúde e estética.</p>
@@ -612,22 +641,22 @@
                   <div class="flex transition-transform duration-500 ease-in-out" data-carousel-track>
                     <div class="w-full shrink-0">
                       <div class="relative aspect-4/5 overflow-hidden rounded-3xl bg-(--brand-neutral)">
-                        <img src="img/facetas.webp" alt="Facetas dentárias - antes e depois - Bom Jesus da Lapa" width="904" height="1600" loading="lazy" class="h-full w-full object-cover" />
+                        <img src="img/facetas.webp" srcset="img/facetas-640.webp 640w, img/facetas-800.webp 800w, img/facetas.webp 1080w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 50vw, calc(100vw - 32px)" alt="Facetas dentárias - antes e depois - Bom Jesus da Lapa" width="904" height="1600" loading="lazy" class="h-full w-full object-cover" />
                       </div>
                     </div>
                     <div class="w-full shrink-0">
                       <div class="relative aspect-4/5 overflow-hidden rounded-3xl bg-(--brand-neutral)">
-                        <img src="img/clareamento.webp" alt="Clareamento dental - antes e depois - Bom Jesus da Lapa" width="1070" height="1600" loading="lazy" class="h-full w-full object-cover" />
+                        <img src="img/clareamento.webp" srcset="img/clareamento-640.webp 640w, img/clareamento-800.webp 800w, img/clareamento.webp 1080w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 50vw, calc(100vw - 32px)" alt="Clareamento dental - antes e depois - Bom Jesus da Lapa" width="1070" height="1600" loading="lazy" class="h-full w-full object-cover" />
                       </div>
                     </div>
                     <div class="w-full shrink-0">
                       <div class="relative aspect-4/5 overflow-hidden rounded-3xl bg-(--brand-neutral)">
-                        <img src="img/infantil.webp" alt="Atendimento odontológico infantil - Bom Jesus da Lapa" width="1147" height="1597" loading="lazy" class="h-full w-full object-cover" />
+                        <img src="img/infantil.webp" srcset="img/infantil-640.webp 640w, img/infantil-800.webp 800w, img/infantil.webp 1080w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 50vw, calc(100vw - 32px)" alt="Atendimento odontológico infantil - Bom Jesus da Lapa" width="1147" height="1597" loading="lazy" class="h-full w-full object-cover" />
                       </div>
                     </div>
                     <div class="w-full shrink-0">
                       <div class="relative aspect-4/5 overflow-hidden rounded-3xl bg-(--brand-neutral)">
-                        <img src="img/ortodontia.webp" alt="Ortodontia - antes e depois - Bom Jesus da Lapa" width="912" height="1600" loading="lazy" class="h-full w-full object-cover" />
+                        <img src="img/ortodontia.webp" srcset="img/ortodontia-640.webp 640w, img/ortodontia-800.webp 800w, img/ortodontia.webp 1080w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 50vw, calc(100vw - 32px)" alt="Ortodontia - antes e depois - Bom Jesus da Lapa" width="912" height="1600" loading="lazy" class="h-full w-full object-cover" />
                       </div>
                     </div>
                   </div>
@@ -635,10 +664,10 @@
 
                 <!-- Carousel controls -->
                 <button type="button" data-carousel-prev aria-label="Foto anterior" class="absolute left-2 top-1/2 -translate-y-1/2 flex h-10 w-10 items-center justify-center rounded-full bg-white/90 shadow-lg cursor-pointer">
-                  <i class="bx bx-chevron-left text-xl text-(--brand-ink)"></i>
+                  <svg class="icon text-xl text-(--brand-ink)" aria-hidden="true"><use href="#bx-chevron-left"/></svg>
                 </button>
                 <button type="button" data-carousel-next aria-label="Próxima foto" class="absolute right-2 top-1/2 -translate-y-1/2 flex h-10 w-10 items-center justify-center rounded-full bg-white/90 shadow-lg cursor-pointer">
-                  <i class="bx bx-chevron-right text-xl text-(--brand-ink)"></i>
+                  <svg class="icon text-xl text-(--brand-ink)" aria-hidden="true"><use href="#bx-chevron-right"/></svg>
                 </button>
 
                 <!-- Dots -->
@@ -662,7 +691,7 @@
                     <p class="font-semibold">Facetas</p>
                   </div>
                 </div>
-                <img src="img/facetas.webp" alt="Facetas dentárias - antes e depois - Bom Jesus da Lapa" width="904" height="1600" loading="lazy" class="h-full w-full object-cover" />
+                <img src="img/facetas.webp" srcset="img/facetas-640.webp 640w, img/facetas-800.webp 800w, img/facetas.webp 1080w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 50vw, calc(100vw - 32px)" alt="Facetas dentárias - antes e depois - Bom Jesus da Lapa" width="904" height="1600" loading="lazy" class="h-full w-full object-cover" />
               </div>
 
               <div class="group relative aspect-4/5 overflow-hidden rounded-3xl bg-(--brand-neutral) cursor-pointer">
@@ -674,7 +703,7 @@
                     <p class="font-semibold">Clareamento</p>
                   </div>
                 </div>
-                <img src="img/clareamento.webp" alt="Clareamento dental - antes e depois - Bom Jesus da Lapa" width="1070" height="1600" loading="lazy" class="h-full w-full object-cover" />
+                <img src="img/clareamento.webp" srcset="img/clareamento-640.webp 640w, img/clareamento-800.webp 800w, img/clareamento.webp 1080w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 50vw, calc(100vw - 32px)" alt="Clareamento dental - antes e depois - Bom Jesus da Lapa" width="1070" height="1600" loading="lazy" class="h-full w-full object-cover" />
               </div>
 
               <div class="group relative aspect-4/5 overflow-hidden rounded-3xl bg-(--brand-neutral) cursor-pointer">
@@ -686,7 +715,7 @@
                     <p class="font-semibold">Infantil</p>
                   </div>
                 </div>
-                <img src="img/infantil.webp" alt="Atendimento odontológico infantil - Bom Jesus da Lapa" width="1147" height="1597" loading="lazy" class="h-full w-full object-cover" />
+                <img src="img/infantil.webp" srcset="img/infantil-640.webp 640w, img/infantil-800.webp 800w, img/infantil.webp 1080w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 50vw, calc(100vw - 32px)" alt="Atendimento odontológico infantil - Bom Jesus da Lapa" width="1147" height="1597" loading="lazy" class="h-full w-full object-cover" />
               </div>
 
               <div class="group relative aspect-4/5 overflow-hidden rounded-3xl bg-(--brand-neutral) cursor-pointer">
@@ -698,7 +727,7 @@
                     <p class="font-semibold">Ortodontia</p>
                   </div>
                 </div>
-                <img src="img/ortodontia.webp" alt="Ortodontia - antes e depois - Bom Jesus da Lapa" width="912" height="1600" loading="lazy" class="h-full w-full object-cover" />
+                <img src="img/ortodontia.webp" srcset="img/ortodontia-640.webp 640w, img/ortodontia-800.webp 800w, img/ortodontia.webp 1080w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 50vw, calc(100vw - 32px)" alt="Ortodontia - antes e depois - Bom Jesus da Lapa" width="912" height="1600" loading="lazy" class="h-full w-full object-cover" />
               </div>
             </div>
           </div>
@@ -724,7 +753,7 @@
               <div class="flex items-center gap-4 shrink-0 justify-center lg:justify-start">
                 <div class="text-right lg:text-left">
                   <div class="flex items-center gap-1 justify-end lg:justify-start">
-                    <i class="bx bxs-star text-xl text-yellow-400"></i><i class="bx bxs-star text-xl text-yellow-400"></i><i class="bx bxs-star text-xl text-yellow-400"></i><i class="bx bxs-star text-xl text-yellow-400"></i><i class="bx bxs-star text-xl text-yellow-400"></i>
+                    <svg class="icon text-xl text-yellow-400" aria-hidden="true"><use href="#bxs-star"/></svg><svg class="icon text-xl text-yellow-400" aria-hidden="true"><use href="#bxs-star"/></svg><svg class="icon text-xl text-yellow-400" aria-hidden="true"><use href="#bxs-star"/></svg><svg class="icon text-xl text-yellow-400" aria-hidden="true"><use href="#bxs-star"/></svg><svg class="icon text-xl text-yellow-400" aria-hidden="true"><use href="#bxs-star"/></svg>
                   </div>
                   <p class="text-sm text-(--brand-ink)/60 mt-1">Baseado em +200 avaliações</p>
                 </div>
@@ -741,7 +770,7 @@
                   <svg class="h-4 w-4 text-white" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" /></svg>
                 </div>
                 <div class="flex items-center gap-1 mb-6">
-                  <i class="bx bxs-star text-xl text-yellow-400"></i><i class="bx bxs-star text-xl text-yellow-400"></i><i class="bx bxs-star text-xl text-yellow-400"></i><i class="bx bxs-star text-xl text-yellow-400"></i><i class="bx bxs-star text-xl text-yellow-400"></i>
+                  <svg class="icon text-xl text-yellow-400" aria-hidden="true"><use href="#bxs-star"/></svg><svg class="icon text-xl text-yellow-400" aria-hidden="true"><use href="#bxs-star"/></svg><svg class="icon text-xl text-yellow-400" aria-hidden="true"><use href="#bxs-star"/></svg><svg class="icon text-xl text-yellow-400" aria-hidden="true"><use href="#bxs-star"/></svg><svg class="icon text-xl text-yellow-400" aria-hidden="true"><use href="#bxs-star"/></svg>
                 </div>
                 <p class="text-lg text-(--brand-ink)/80 leading-relaxed mb-8">"Atendimento excelente, muito cuidado e resultado lindo. Me senti muito segura durante todo o processo."</p>
                 <div class="flex items-center gap-4">
@@ -758,7 +787,7 @@
                   <svg class="h-4 w-4 text-white" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" /></svg>
                 </div>
                 <div class="flex items-center gap-1 mb-6">
-                  <i class="bx bxs-star text-xl text-yellow-400"></i><i class="bx bxs-star text-xl text-yellow-400"></i><i class="bx bxs-star text-xl text-yellow-400"></i><i class="bx bxs-star text-xl text-yellow-400"></i><i class="bx bxs-star text-xl text-yellow-400"></i>
+                  <svg class="icon text-xl text-yellow-400" aria-hidden="true"><use href="#bxs-star"/></svg><svg class="icon text-xl text-yellow-400" aria-hidden="true"><use href="#bxs-star"/></svg><svg class="icon text-xl text-yellow-400" aria-hidden="true"><use href="#bxs-star"/></svg><svg class="icon text-xl text-yellow-400" aria-hidden="true"><use href="#bxs-star"/></svg><svg class="icon text-xl text-yellow-400" aria-hidden="true"><use href="#bxs-star"/></svg>
                 </div>
                 <p class="text-lg text-(--brand-ink)/80 leading-relaxed mb-8">"Fiz clareamento e amei! Tudo muito bem explicado e acompanhamento impecável."</p>
                 <div class="flex items-center gap-4">
@@ -775,7 +804,7 @@
                   <svg class="h-4 w-4 text-white" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" /></svg>
                 </div>
                 <div class="flex items-center gap-1 mb-6">
-                  <i class="bx bxs-star text-xl text-yellow-400"></i><i class="bx bxs-star text-xl text-yellow-400"></i><i class="bx bxs-star text-xl text-yellow-400"></i><i class="bx bxs-star text-xl text-yellow-400"></i><i class="bx bxs-star text-xl text-yellow-400"></i>
+                  <svg class="icon text-xl text-yellow-400" aria-hidden="true"><use href="#bxs-star"/></svg><svg class="icon text-xl text-yellow-400" aria-hidden="true"><use href="#bxs-star"/></svg><svg class="icon text-xl text-yellow-400" aria-hidden="true"><use href="#bxs-star"/></svg><svg class="icon text-xl text-yellow-400" aria-hidden="true"><use href="#bxs-star"/></svg><svg class="icon text-xl text-yellow-400" aria-hidden="true"><use href="#bxs-star"/></svg>
                 </div>
                 <p class="text-lg text-(--brand-ink)/80 leading-relaxed mb-8">"Minha filha adorou o atendimento infantil. Muito acolhedora e paciente."</p>
                 <div class="flex items-center gap-4">
@@ -933,19 +962,19 @@
                 <div class="space-y-4 mb-8">
                   <div class="flex items-center gap-3 p-4 rounded-2xl bg-(--brand-neutral)">
                     <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-(--brand-wine)/10">
-                      <i class="bx bx-check text-xl text-(--brand-wine)"></i>
+                      <svg class="icon text-xl text-(--brand-wine)" aria-hidden="true"><use href="#bx-check"/></svg>
                     </span>
                     <span class="text-(--brand-ink)">Avaliação personalizada</span>
                   </div>
                   <div class="flex items-center gap-3 p-4 rounded-2xl bg-(--brand-neutral)">
                     <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-(--brand-wine)/10">
-                      <i class="bx bx-check text-xl text-(--brand-wine)"></i>
+                      <svg class="icon text-xl text-(--brand-wine)" aria-hidden="true"><use href="#bx-check"/></svg>
                     </span>
                     <span class="text-(--brand-ink)">Atendimento humanizado</span>
                   </div>
                   <div class="flex items-center gap-3 p-4 rounded-2xl bg-(--brand-neutral)">
                     <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-(--brand-wine)/10">
-                      <i class="bx bx-check text-xl text-(--brand-wine)"></i>
+                      <svg class="icon text-xl text-(--brand-wine)" aria-hidden="true"><use href="#bx-check"/></svg>
                     </span>
                     <span class="text-(--brand-ink)">Planejamento completo</span>
                   </div>
@@ -971,7 +1000,7 @@
           <div class="py-16 grid gap-12 md:grid-cols-2 lg:grid-cols-4">
             <!-- Brand -->
             <div class="lg:col-span-2 text-center lg:text-left">
-              <img src="img/logo-ane-elise.png" alt="Logo Dra. Ane Elise" width="702" height="418" loading="lazy" class="w-auto h-24 brightness-0 mx-auto lg:mx-0" />
+              <img src="img/logo-ane-elise.webp" srcset="img/logo-ane-elise-240.webp 240w, img/logo-ane-elise.webp 480w" sizes="162px" alt="Logo Dra. Ane Elise" width="702" height="418" loading="lazy" class="w-auto h-24 brightness-0 mx-auto lg:mx-0" />
               <p class="mt-6 text-(--brand-ink)/60 max-w-md leading-relaxed mx-auto lg:mx-0">
                 Cuidando do seu sorriso com dedicação e carinho.
                 Atendimento humanizado e tratamentos de alta qualidade em Bom Jesus da Lapa.
@@ -1005,15 +1034,15 @@
               <h4 class="font-semibold text-lg mb-6">Contato</h4>
               <ul class="space-y-4 text-(--brand-ink)/60">
                 <li class="flex items-start gap-3 justify-center lg:justify-start">
-                  <i class="bx bx-map text-lg"></i>
+                  <svg class="icon text-lg" aria-hidden="true"><use href="#bx-map"/></svg>
                   <span>Bom Jesus da Lapa - BA</span>
                 </li>
                 <li class="flex items-start gap-3 justify-center lg:justify-start">
-                  <i class="bx bx-phone text-lg"></i>
+                  <svg class="icon text-lg" aria-hidden="true"><use href="#bx-phone"/></svg>
                   <a href="tel:+5577998085944" class="hover:text-(--brand-ink) transition-colors">(77) 99808-5944</a>
                 </li>
                 <li class="flex items-start gap-3 justify-center lg:justify-start">
-                  <i class="bx bx-time text-lg"></i>
+                  <svg class="icon text-lg" aria-hidden="true"><use href="#bx-time"/></svg>
                   <span>Seg a Sex • 08h às 18h</span>
                 </li>
               </ul>

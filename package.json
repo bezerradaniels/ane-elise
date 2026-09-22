@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "tailwindcss -i css/input.css -o css/style.css --watch",
     "build": "tailwindcss -i css/input.css -o css/style.css --minify",
-    "deploy": "npm run build && rm -f site.zip && zip -rq site.zip index.html robots.txt sitemap.xml css/style.css js img -x '*.DS_Store'"
+    "deploy": "sh scripts/deploy.sh"
   },
   "devDependencies": {
     "@tailwindcss/cli": "^4.1.18",
