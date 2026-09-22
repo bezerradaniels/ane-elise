@@ -94,7 +94,7 @@ Este documento mapeia todos os botões do WhatsApp e links importantes no site, 
 
 ### Número do WhatsApp
 - **Número:** +55 77 99808-5944
-- **Link:** `https://wa.me/5577998085944`
+- **Link:** `https://wa.me/5577998085944?text=...`
 
 ### Rastreamento com Google Tag Manager
 Todos os botões podem ser rastreados usando o Google Tag Manager através de:
@@ -119,6 +119,22 @@ Parâmetros do Evento:
 Tipo: Clique - Somente links
 Condição: Click ID corresponde à RegEx ^btn-wpp-.*
 ```
+
+---
+
+## Mensagens pré-preenchidas
+
+Cada botão abre o WhatsApp com uma mensagem já digitada (parâmetro `?text=` no link `wa.me`, com o texto codificado para URL).
+
+| Botão | Mensagem |
+|-------|----------|
+| `btn-wpp-header-desktop` / `btn-wpp-header-mobile` | Olá, Dra. Ane Elise! Vim pelo site e gostaria de agendar uma consulta. |
+| `btn-wpp-hero` | Olá, Dra. Ane Elise! Vim pelo site e gostaria de agendar uma avaliação. |
+| `btn-wpp-about` | Olá, Dra. Ane Elise! Vim pelo site e gostaria de agendar uma consulta. |
+| `btn-wpp-faq-desktop` / `btn-wpp-faq-mobile` | Olá, Dra. Ane Elise! Vim pelo site e tenho uma dúvida sobre os tratamentos. |
+| `btn-wpp-contact` | Olá, Dra. Ane Elise! Vim pelo site e gostaria de agendar minha avaliação. Quais horários estão disponíveis? |
+
+Para alterar uma mensagem, gere o texto codificado (ex.: `encodeURIComponent("sua mensagem")` no console do navegador) e troque o valor depois de `?text=` no `index.html`.
 
 ---
 
