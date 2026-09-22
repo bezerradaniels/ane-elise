@@ -1,74 +1,45 @@
-# React + TypeScript + Vite
+# Dra. Ane Elise — Site
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Landing page da Dra. Ane Elise, cirurgiã dentista em Bom Jesus da Lapa - BA.
 
-Currently, two official plugins are available:
+Feita em HTML estático + Tailwind CSS v4 + um arquivo pequeno de JavaScript. Não tem framework.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Estrutura
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```
+index.html      ← a página inteira
+css/input.css   ← fonte do CSS (Tailwind + cores da marca)
+css/style.css   ← CSS gerado — NÃO editar à mão
+js/main.js      ← header ao rolar, menu mobile, carrossel, ano do rodapé
+img/            ← imagens (fotos em .webp)
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Editando
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- **Textos, links e imagens:** edite `index.html` direto.
+- **Classes Tailwind:** depois de adicionar ou trocar classes em `index.html` ou `js/`, gere o CSS de novo:
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install      # só na primeira vez
+npm run dev      # recompila o CSS a cada alteração
+npm run build    # gera o css/style.css minificado para publicar
 ```
-# ane-elise
+
+O `css/style.css` fica versionado, então o site funciona sem precisar de build no servidor.
+
+- **Cores da marca:** variáveis `--brand-*` em `css/input.css`.
+- **Novas fotos:** converta para WebP (`cwebp -q 80 foto.jpg -o img/foto.webp`).
+
+## Deploy (Hostinger)
+
+O deploy é manual, pelo Gerenciador de Arquivos da Hostinger:
+
+1. `npm run deploy`: gera o CSS e cria o `site.zip` com os arquivos do site (incluindo `robots.txt` e `sitemap.xml`).
+2. No Gerenciador de Arquivos, abra `public_html`, envie o `site.zip` e use **Extrair** (sobrescrevendo os arquivos existentes).
+3. Apague o `site.zip` de dentro do `public_html`.
+
+Se o navegador mostrar o visual antigo depois de um deploy, limpe o cache (Ctrl+Shift+R) ou o cache do LiteSpeed no hPanel.
+
+## Rastreamento
+
+Os IDs dos botões do WhatsApp usados no GTM estão em [WHATSAPP_BUTTONS_MAPPING.md](WHATSAPP_BUTTONS_MAPPING.md).

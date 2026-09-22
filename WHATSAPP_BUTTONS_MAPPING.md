@@ -14,8 +14,8 @@ Este documento mapeia todos os botões do WhatsApp e links importantes no site, 
 - **ID:** `btn-wpp-header-desktop`
 - **Localização:** Cabeçalho do site (visível apenas em desktop)
 - **Texto:** "Agendar"
-- **Arquivo:** `/src/secoes/Header/index.tsx`
-- **Linha:** ~80
+- **Arquivo:** `/index.html`
+- **Linha:** ~140
 - **Descrição:** Botão principal no menu superior para desktop
 
 ---
@@ -24,8 +24,8 @@ Este documento mapeia todos os botões do WhatsApp e links importantes no site, 
 - **ID:** `btn-wpp-header-mobile`
 - **Localização:** Menu mobile (hamburguer)
 - **Texto:** "Agendar no WhatsApp"
-- **Arquivo:** `/src/secoes/Header/index.tsx`
-- **Linha:** ~137
+- **Arquivo:** `/index.html`
+- **Linha:** ~203
 - **Descrição:** Botão no menu mobile que aparece quando o usuário abre o menu hamburguer
 
 ---
@@ -34,8 +34,8 @@ Este documento mapeia todos os botões do WhatsApp e links importantes no site, 
 - **ID:** `btn-wpp-hero`
 - **Localização:** Seção principal/banner do site (primeira seção)
 - **Texto:** "Agendar avaliação"
-- **Arquivo:** `/src/secoes/Hero/index.tsx`
-- **Linha:** ~29
+- **Arquivo:** `/index.html`
+- **Linha:** ~250
 - **Descrição:** Call-to-action principal na primeira dobra do site
 
 ---
@@ -44,8 +44,8 @@ Este documento mapeia todos os botões do WhatsApp e links importantes no site, 
 - **ID:** `btn-wpp-about`
 - **Localização:** Seção "Sobre" (About)
 - **Texto:** "Agendar consulta no WhatsApp"
-- **Arquivo:** `/src/secoes/About/index.tsx`
-- **Linha:** ~97
+- **Arquivo:** `/index.html`
+- **Linha:** ~430
 - **Descrição:** Botão secundário na seção sobre a dentista
 
 ---
@@ -54,8 +54,8 @@ Este documento mapeia todos os botões do WhatsApp e links importantes no site, 
 - **ID:** `btn-wpp-faq-desktop`
 - **Localização:** Seção de perguntas frequentes (visível apenas em desktop)
 - **Texto:** "Falar no WhatsApp"
-- **Arquivo:** `/src/secoes/Faq/index.tsx`
-- **Linha:** ~51
+- **Arquivo:** `/index.html`
+- **Linha:** ~818
 - **Descrição:** CTA no card "Ainda tem dúvidas?" para desktop
 
 ---
@@ -64,8 +64,8 @@ Este documento mapeia todos os botões do WhatsApp e links importantes no site, 
 - **ID:** `btn-wpp-faq-mobile`
 - **Localização:** Seção de perguntas frequentes (visível apenas em mobile)
 - **Texto:** "Falar no WhatsApp"
-- **Arquivo:** `/src/secoes/Faq/index.tsx`
-- **Linha:** ~100
+- **Arquivo:** `/index.html`
+- **Linha:** ~896
 - **Descrição:** CTA no card "Ainda tem dúvidas?" para mobile (aparece no final da seção)
 
 ---
@@ -74,8 +74,8 @@ Este documento mapeia todos os botões do WhatsApp e links importantes no site, 
 - **ID:** `btn-wpp-contact`
 - **Localização:** Seção de contato
 - **Texto:** "Chamar no WhatsApp"
-- **Arquivo:** `/src/secoes/Contact/index.tsx`
-- **Linha:** ~59
+- **Arquivo:** `/index.html`
+- **Linha:** ~954
 - **Descrição:** Botão principal no card de contato
 
 ---
@@ -84,8 +84,8 @@ Este documento mapeia todos os botões do WhatsApp e links importantes no site, 
 - **ID:** `footer-developer-link`
 - **Localização:** Rodapé do site (barra inferior)
 - **Texto:** "Desenvolvido por Daniel Bezerra"
-- **Arquivo:** `/src/secoes/Footer/index.tsx`
-- **Linha:** ~91
+- **Arquivo:** `/index.html`
+- **Linha:** ~1030
 - **Descrição:** Link para o portfólio do desenvolvedor no rodapé
 
 ---
@@ -93,13 +93,15 @@ Este documento mapeia todos os botões do WhatsApp e links importantes no site, 
 ## Informações Técnicas
 
 ### Número do WhatsApp
-- **Número:** +55 77 99859-7104
-- **Link:** `https://wa.me/5577998597104`
+- **Número:** +55 77 99808-5944
+- **Link:** `https://wa.me/5577998085944`
 
 ### Rastreamento com Google Tag Manager
 Todos os botões podem ser rastreados usando o Google Tag Manager através de:
-- **Trigger:** Click - All Elements
+- **Trigger:** Click - Just Links
 - **Condição:** Click ID matches RegEx `^btn-wpp-.*`
+
+> O ID fica no `<a>`. Use "Just Links" (e não "All Elements"): assim o GTM reporta o link mesmo quando o clique cai no ícone ou no texto de dentro dele.
 
 ### Exemplo de Configuração GTM
 
@@ -114,7 +116,7 @@ Parâmetros do Evento:
 
 #### Acionador
 ```
-Tipo: Clique - Todos os elementos
+Tipo: Clique - Somente links
 Condição: Click ID corresponde à RegEx ^btn-wpp-.*
 ```
 
@@ -136,10 +138,10 @@ Condição: Click ID corresponde à RegEx ^btn-wpp-.*
 
 ## Notas
 - Botões marcados como "responsivo" aparecem em todas as telas mas podem ter layout diferente
-- Botões com variantes desktop/mobile são renderizados condicionalmente
+- Botões com variantes desktop/mobile ficam os dois no HTML; o CSS (`lg:hidden` / `hidden lg:block`) mostra só um por vez
 - Todos os links abrem em nova aba (`target="_blank"`)
 - Todos os links têm `rel="noreferrer"` para segurança
 
 ---
 
-**Última atualização:** 30 de Janeiro de 2026
+**Última atualização:** 22 de Setembro de 2026
